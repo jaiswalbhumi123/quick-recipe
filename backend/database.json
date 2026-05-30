@@ -1,0 +1,105 @@
+{
+  "users": [
+    {
+      "name": "Abhay Jaiswal",
+      "email": "abhay@gmail.com",
+      "phone": "1234567890",
+      "password": "123456"
+    },
+    {
+      "name": "Demo Visitor",
+      "email": "demo@google.com",
+      "phone": "9999999999",
+      "password": "demo"
+    },
+    {
+      "name": "abee",
+      "email": "abeejaiswal@gmail.com",
+      "phone": "9920766529",
+      "password": "bhumijaiswal@0218"
+    },
+    {
+      "name": "bhumi",
+      "email": "bhumi.cs23040@sstcollege.edu.in",
+      "phone": "8999019873",
+      "password": "Stucs@040"
+    }
+  ],
+  "visitors": [
+    {
+      "time": "11:01:44 PM",
+      "endpoint": "/dashboard.html",
+      "ip": "::1"
+    },
+    {
+      "time": "11:05:21 PM",
+      "endpoint": "/index.html",
+      "ip": "::1"
+    },
+    {
+      "time": "11:15:04 PM",
+      "endpoint": "/index.html",
+      "ip": "::1"
+    },
+    {
+      "time": "11:15:23 PM",
+      "endpoint": "/dashboard.html",
+      "ip": "::1"
+    },
+    {
+      "time": "11:15:37 PM",
+      "endpoint": "/index.html",
+      "ip": "::1"
+    },
+    {
+      "time": "11:15:46 PM",
+      "endpoint": "/register.html",
+      "ip": "::1"
+    },
+    {
+      "time": "11:17:23 PM",
+      "endpoint": "/index.html",
+      "ip": "::1"
+    },
+    {
+      "time": "11:17:38 PM",
+      "endpoint": "/dashboard.html",
+      "ip": "::1"
+    },
+    {
+      "time": "10:06:22 PM",
+      "endpoint": "/frontend/index.html",
+      "ip": "::1"
+    },
+    {
+      "time": "10:07:29 PM",
+      "endpoint": "/frontend/index.html",
+      "ip": "::1"
+    },
+    {
+      "time": "1:03:44 PM",
+      "endpoint": "/index.html",
+      "ip": "::1"
+    },
+    {
+      "time": "1:04:40 PM",
+      "endpoint": "/register.html",
+      "ip": "::1"
+    },
+    {
+      "time": "1:06:09 PM",
+      "endpoint": "/dashboard.html",
+      "ip": "::1"
+    },
+    {
+      "time": "12:05:29 AM",
+      "endpoint": "/index.html",
+      "ip": "::1"
+    },
+    {
+      "time": "12:16:48 AM",
+      "endpoint": "/index.html",
+      "ip": "::1"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Favicon</title>
+</head>
+<body>
+<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" fill="#4CAF50" rx="8"/>
+  <text x="50%" y="65%" font-family="Arial" font-size="20" fill="white" text-anchor="middle">Q</text>
+</svg>
+</body>
+</html>

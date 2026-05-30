@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickRecipe - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- 3D Animated Background specific to Dashboard -->
+        <div class="floating-items dashboard-floats">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=400&fit=crop" class="float-item dish-1" alt="dish">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=400&fit=crop" class="float-item dish-2" alt="dish">
+            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=400&fit=crop" class="float-item dish-3" alt="dish">
+            <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&h=400&fit=crop" class="float-item dish-4" alt="dish">
+        </div>
+
+        <!-- Dashboard Header -->
+        <div class="header" style="height: 180px;">
+            <div class="header-user">
+                <span class="greeting">Hello Abhay,</span>
+                <span class="title">Explore<br>Your Favorites!</span>
+            </div>
+            <div class="header-icon" title="Logout" onclick="logout()">
+                <i class="fa-solid fa-sign-out-alt"></i>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-wrapper">
+            <div class="search-bar">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search any Recipes...">
+                <i class="fa-solid fa-sliders" style="cursor: pointer;" onclick="document.getElementById('searchInput').focus()"></i>
+            </div>
+        </div>
+
+        <!-- Horizontal Categories -->
+        <div class="categories-scroll">
+            <div class="cat-item active" onclick="setCategory('all', this)">
+                <div class="cat-icon-container"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=100" alt="All"></div>
+                <span>All</span>
+            </div>
+            <div class="cat-item" onclick="setCategory('breakfast', this)">
+                <div class="cat-icon-container"><img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=100" alt="Breakfast"></div>
+                <span>Breakfast</span>
+            </div>
+            <div class="cat-item" onclick="setCategory('lunch', this)">
+                <div class="cat-icon-container"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=100" alt="Lunch"></div>
+                <span>Lunch</span>
+            </div>
+            <div class="cat-item" onclick="setCategory('dinner', this)">
+                <div class="cat-icon-container"><img src="https://images.unsplash.com/photo-1560684352-8497838a2229?w=100" alt="Dinner"></div>
+                <span>Dinner</span>
+            </div>
+            <div class="cat-item" onclick="setCategory('snacks', this)">
+                <div class="cat-icon-container"><img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=100" alt="Snacks"></div>
+                <span>Snacks</span>
+            </div>
+            <div class="cat-item" onclick="setCategory('saved', this)">
+                <div class="cat-icon-container"><i class="fa-solid fa-bookmark" style="font-size: 24px; display: flex; align-items: center; justify-content: center; height: 100%; color: var(--primary);"></i></div>
+                <span>Saved</span>
+            </div>
+        </div>
+
+        <!-- Regional Categories -->
+        <h3 style="margin: 20px 20px 10px 20px; font-size: 1.1rem;">Explore Regional Cuisine</h3>
+        <div class="categories-scroll">
+            <div class="cat-item" onclick="setCategory('up', this)">
+                <div class="cat-icon-container"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=100" alt="UP Food"></div>
+                <span>UP Style</span>
+            </div>
+            <div class="cat-item" onclick="setCategory('maharashtra', this)">
+                <div class="cat-icon-container"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=100" alt="Maharashtrian Food"></div>
+                <span>Maharashtra</span>
+            </div>
+            <div class="cat-item" onclick="setCategory('punjab', this)">
+                <div class="cat-icon-container"><img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=100" alt="Punjabi Food"></div>
+                <span>Punjabi</span>
+            </div>
+            <div class="cat-item" onclick="setCategory('mughlai', this)">
+                <div class="cat-icon-container"><img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?w=100" alt="Mughlai Food"></div>
+                <span>Mughlai</span>
+            </div>
+        </div>
+
+        <!-- Section 1 -->
+        <div class="section-header">
+            <h3>Recommended Recipes</h3>
+            <a href="#">See All</a>
+        </div>
+        <div id="recipesGrid" class="recipes-grid-2col">
+             <!-- Recipes injected via JavaScript -->
+        </div>
+
+        <!-- Main Detail Modal (Replicating Screen 3) -->
+        <div class="detail-modal" id="recipeModal">
+            <!-- Injected by script.js -->
+        </div>
+    </div>
+
+    <script src="script.js?v=3.0"></script>
+</body>
+</html>

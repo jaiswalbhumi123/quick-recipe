@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickRecipe - Create Account</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .login-wrapper {
+            animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="login-body">
+    <div class="floating-items">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=400&fit=crop" class="float-item dish-1" alt="dish">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=400&fit=crop" class="float-item dish-2" alt="dish">
+        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=400&fit=crop" class="float-item dish-3" alt="dish">
+        <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&h=400&fit=crop" class="float-item dish-4" alt="dish">
+    </div>
+    
+    <div class="login-wrapper">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <div class="header-icon" style="margin: 0 auto 15px; width: 60px; height: 60px; background: var(--primary-glow); border-color: var(--primary);">
+                <i class="fa-solid fa-user-plus" style="color: var(--primary); font-size: 1.5rem;"></i>
+            </div>
+            <h1 class="logo-text">Quick<span>Recipe</span></h1>
+            <p class="login-subtitle">Join thousands of home chefs!</p>
+        </div>
+        
+        <div class="login-form">
+            <div class="input-group">
+                <i class="fa-solid fa-user input-icon"></i>
+                <input type="text" id="name" placeholder="Full Name">
+            </div>
+            
+            <div class="input-group">
+                <i class="fa-solid fa-envelope input-icon"></i>
+                <input type="email" id="email" placeholder="Email Address">
+            </div>
+            
+            <div class="input-group">
+                <i class="fa-solid fa-phone input-icon"></i>
+                <input type="tel" id="phone" placeholder="Phone Number">
+            </div>
+
+            <div class="input-group">
+                <i class="fa-solid fa-lock input-icon"></i>
+                <input type="password" id="password" placeholder="Password">
+            </div>
+
+            <button onclick="register()" class="btn-primary" style="margin-top: 10px;">
+                Create Account <i class="fa-solid fa-check"></i>
+            </button>
+
+            <button onclick="googleLogin()" class="btn-outline">
+                <img src="https://www.google.com/favicon.ico" width="20" alt="google"> Sign up with Google
+            </button>
+
+            <div class="new-member">
+                Already a member? <a href="index.html">Sign In Here</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js?v=3.0"></script>
+</body>
+</html>

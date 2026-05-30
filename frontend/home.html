@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickRecipe - Discover</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Dashboard Header -->
+        <div class="header">
+            <div class="header-user">
+                <span class="greeting">Daily Inspiration</span>
+                <span class="title">What's Cooking<br>Today?</span>
+            </div>
+            <div class="header-icon" title="View Saved" onclick="window.location.href='dashboard.html'">
+                <i class="fa-solid fa-bookmark"></i>
+            </div>
+        </div>
+
+        <!-- Hero Card (Featured Recipe) -->
+        <div style="padding: 0 25px; margin-bottom: 30px;">
+            <div class="recipe-card-dark" style="height: auto; padding: 20px; background: linear-gradient(135deg, #1e2129, #13151b); border-color: var(--primary);">
+                <div style="display:flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+                    <span style="background: var(--primary-glow); color: var(--primary); padding: 4px 12px; border-radius: 10px; font-size: 0.75rem; font-weight: 600;">🔥 FEATURED DISH</span>
+                    <i class="fa-solid fa-bolt" style="color: #ffcc00;"></i>
+                </div>
+                <h2 style="font-size: 1.4rem; margin-bottom: 8px;">Classic Paneer Paratha</h2>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; line-height: 1.5;">Authentic homestyle paratha stuffed with spicy, protein-rich crumbled paneer. Perfectly roasted with ghee.</p>
+                <div style="display:flex; align-items: center; gap: 20px; font-size: 0.85rem; color: var(--text-muted);">
+                    <span><i class="fa-regular fa-clock" style="color:var(--primary); margin-right:5px;"></i> 10 min</span>
+                    <span><i class="fa-solid fa-fire" style="color:var(--primary); margin-right:5px;"></i> 420 kcal</span>
+                </div>
+                <button onclick="openRecipeModal(1100)" class="btn-primary" style="margin-top: 25px; padding: 12px; font-size: 0.95rem;">
+                    Cook Now <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-wrapper">
+            <div class="search-bar">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search for your next meal...">
+            </div>
+        </div>
+
+        <!-- Discovery Sections -->
+        <div class="section-header">
+            <h3>Trending Dishes</h3>
+            <a href="dashboard.html">Explore All</a>
+        </div>
+        
+        <div id="recipesGrid" class="recipes-grid-2col">
+             <!-- Recipes injected via JavaScript -->
+        </div>
+
+        <!-- Detail Modal -->
+        <div class="detail-modal" id="recipeModal"></div>
+    </div>
+
+    <!-- Navigation Bar (Mobile Friendly Bottom Nav) -->
+    <div style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(24, 26, 32, 0.95); backdrop-filter: blur(15px); padding: 15px 30px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; z-index: 100;">
+        <i class="fa-solid fa-house" style="color: var(--primary); font-size: 1.4rem; cursor: pointer;"></i>
+        <i class="fa-solid fa-compass" style="color: var(--text-muted); font-size: 1.4rem; cursor: pointer;" onclick="window.location.href='dashboard.html'"></i>
+        <i class="fa-solid fa-heart" style="color: var(--text-muted); font-size: 1.4rem; cursor: pointer;"></i>
+        <i class="fa-solid fa-user" style="color: var(--text-muted); font-size: 1.4rem; cursor: pointer;" onclick="logout()"></i>
+    </div>
+
+    <script src="script.js?v=3.0"></script>
+</body>
+</html>
