@@ -2,8 +2,8 @@ let allRecipes = [];
 let displayedCount = 20;
 let currentCategory = 'all';
 const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
-    ? 'http://localhost:5001/api' 
-    : `http://${window.location.hostname}:5001/api`;
+    ? (window.location.port === '3000' ? 'http://localhost:5001/api' : '/api')
+    : '/api';
 let savedRecipes = JSON.parse(localStorage.getItem('savedRecipes') || '[]');
 
 document.addEventListener('DOMContentLoaded', () => {
